@@ -1,3 +1,4 @@
+# Day 1 - Basics of Python
 var1 = 10 
 var2 = "Hello, World!"
 var3  = 3.14
@@ -51,3 +52,42 @@ int2 = int(input("please enter the second number: "))
 
 print("addition is:", int1+int2)
 print("multiplication is ", int1*int2)
+
+
+#Day 2 - control flow   
+
+
+num1 = int(input("Please enter the number: "))
+if num1%2 ==0:
+    print("Number is even")
+else:
+    print("Number is odd")
+
+
+
+# for loop 
+print("Printing 1to 5 using for loop")
+for i in range(1, 6):
+    print(i)
+
+
+##while loop 
+num1= 10
+print("Printing numbers from 10 to 5 using while loop")
+while(num1>5):
+    print(num1)
+    num1 =num1-1
+
+
+# exception handling 
+input_num = input("enter the number: ")
+try:
+    num1 = int(input_num)
+    answer = num1/100
+    answer =100/num1
+    print("The answer is:", answer)
+except ValueError:
+    print("Invalid input, please enter a valid number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
