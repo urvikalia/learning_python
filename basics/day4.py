@@ -56,6 +56,7 @@ with open("notes.txt", "w") as file:
     file.write("You can write multiple lines in this file.\n")
 
 with open("notes.txt", "r") as file:
-    lines = file.readlines()  # Read all lines into a list
+    lines = file.readlines() 
     for line in lines:
-        print(line.strip())  # Print each line without extra whitespace
+        print(line.strip())  
+
