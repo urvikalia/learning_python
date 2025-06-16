@@ -6,7 +6,7 @@
 def perform_stats(*args):
     if not args:
         return "No arguments provided."
-    if not all(isinstance(args,(int,float)) for args in args):
+    if not all(isinstance(arg,(int,float)) for arg in args):
         return "All arguments must be numbers."
     return {
         "max": max(args),
@@ -48,3 +48,23 @@ user_profile = create_user_profile("Urvi","urvi@gmail.com",age=30,education="B.E
 print("User profile is as below")
 
 print(user_profile)
+
+## function returns : can be a single value or can return multiple values as a tuple
+
+def find_min_max_mean(*args):
+    if not args: 
+        return "NO arguments provided"
+    if not all(isinstance(arg,(int,float)) for arg in args):
+        return "All arguments must be numbers."
+    return(
+        min(args), 
+        max(args),
+        mean(args)
+    )
+    
+def mean(numbers):
+    return sum(numbers) / len(numbers)
+
+print("refreshing returns for functions")
+result = find_min_max_mean(2,4,6,8,10)
+print(result)
